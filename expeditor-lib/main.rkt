@@ -1525,7 +1525,8 @@
     (set-fg-color error-color))
   (ee-display-string obj)
   (when (current-expeditor-color-enabled)
-    (set-fg-color default-color)))
+    (set-fg-color default-color)
+    (ee-flush)))
 
 (module+ main
   (port-count-lines! (current-input-port))
